@@ -71,6 +71,11 @@
             bindings = <&kp TILDE>;
             key-positions = <0 1>;
         };
+
+        layer5 {
+            bindings = <&mo 5>;
+            key-positions = <11 12 33>;
+        };
     };
 
     macros {
