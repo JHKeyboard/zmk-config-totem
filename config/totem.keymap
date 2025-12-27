@@ -63,7 +63,7 @@
         };
 
         c+v {
-            bindings = <&kp V>;
+            bindings = <&kp LC(V)>;
             key-positions = <24 33>;
         };
 
