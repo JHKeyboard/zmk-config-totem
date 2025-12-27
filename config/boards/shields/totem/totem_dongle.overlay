@@ -1,20 +1,10 @@
 /*
- * Dongle overlay – display brightness fix
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
  */
 
 #include "totem.dtsi"
-
-&st7789 {
-    status = "okay";
-
-    display-on-timeout = <0>;
-
-    display-contrast = <255>;
-};
-
-&zephyr_display {
-    status = "okay";
-};
 
 / {
     chosen {
