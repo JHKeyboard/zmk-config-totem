@@ -76,6 +76,16 @@
             bindings = <&mo 5>;
             key-positions = <11 12 33>;
         };
+
+        Alt+F4 {
+            bindings = <&kp LA(F4)>;
+            key-positions = <12 36 16>;
+        };
+
+        Alt+Shift+Del {
+            bindings = <&kp LA(LS(DEL))>;
+            key-positions = <11 33 20>;
+        };
     };
 
     macros {
