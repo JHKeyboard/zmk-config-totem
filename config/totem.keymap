@@ -293,7 +293,7 @@
         &none   &none           &mmv MOVE_UP    &trans           &trans    &trans  &msc SCRL_LEFT    &msc SCRL_UP    &msc SCRL_RIGHT  &trans
         &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &kp F5   &mkp LCLK         &msc SCRL_DOWN  &mkp RCLK        &none
 &trans  &trans  &none           &none           &trans           &trans    &none   &none             &none           &none            &trans  &trans
-                                &trans          &kp C_AC_BACK    &trans    &kp C_AC_FORWARD  &mo 6  &trans
+                                &trans          &kp C_AC_BACK    &trans    &kp C_AC_FORWARD  &mo 7  &trans
             >;
         };
 
@@ -303,6 +303,14 @@
         &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans    &trans      &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP_ARROW)  &kp LG(RIGHT)
 &trans  &trans  &trans          &trans        &trans     &trans    &kp K_CALC  &trans        &trans        &trans            &trans         &kp LEFT_SHIFT
                                 &trans        &trans     &trans    &trans      &trans        &trans
+            >;
+        };
+        Mouse_Fast {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans 
             >;
         };
 
