@@ -15,6 +15,17 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1100
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 #include <dt-bindings/zmk/pointing.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+/ {
+    custom_zip_xy_scaler: custom_zip_xy_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_X>, <INPUT_REL_Y>;
+        track-remainders;
+    };
+};
 
 &mmv {
     time-to-max-speed-ms = <0>; 
@@ -279,7 +290,7 @@
         Mouse {
             bindings = <
         &none   &none           &mmv MOVE_UP    &trans           &trans    &trans  &msc SCRL_LEFT    &msc SCRL_UP    &msc SCRL_RIGHT  &trans
-        &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &none   &mkp LCLK         &msc SCRL_DOWN  &mkp RCLK        &none
+        &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &kp F5   &mkp LCLK         &msc SCRL_DOWN  &mkp RCLK        &none
 &trans  &trans  &none           &none           &trans           &trans    &none   &none             &none           &none            &trans  &trans
                                 &trans          &kp C_AC_BACK    &trans    &kp C_AC_FORWARD  &mo 6  &trans
             >;
