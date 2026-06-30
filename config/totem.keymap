@@ -12,10 +12,17 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1100
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
-#include <dt-bindings/zmk/pointing.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    
+
+#include <dt-bindings/zmk/pointing.h>
+
+&mmv {
+    time-to-max-speed-ms = <0>;       
+    acceleration-exponent = <0>;        
+};
 
 / {
     custom_zip_xy_scaler: custom_zip_xy_scaler {
@@ -27,16 +34,10 @@
     };
 };
 
-&mmv {
-    time-to-max-speed-ms = <0>; 
-    acceleration-exponent = <0>;
-};
-
 &mmv_input_listener {
     mouse_fast {
         layers = <6>;   
-    
-        input-processors = <&zip_xy_scaler 11 6>; 
+        input-processors = <&custom_zip_xy_scaler 11 6>; 
         process-next;
     };
 };
