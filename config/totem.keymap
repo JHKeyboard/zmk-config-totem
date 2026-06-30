@@ -36,7 +36,7 @@
 
 &mmv_input_listener {
     mouse_fast {
-        layers = <6>;   
+        layers = <7>;   
         input-processors = <&custom_zip_xy_scaler 11 6>; 
         process-next;
     };
